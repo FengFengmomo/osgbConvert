@@ -1,9 +1,9 @@
 {
-  "name": "osgbConvertThree",
+  "name": "osgbConvert",
   "version": "0.0.1",
   "description": "Module for reading  OpenSceneGraph 3D models and convert to threejs mesh, display osgb in threejs. file type supported: .osgb .osgt",
   "main": "src/index.js",
-  "module": "build/osgbConvertThree.module.js",
+  "module": "build/osgbConvert.module.js",
   "type": "module",
   "scripts": {
     "start": "npm run examples && http-server examples",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fengfengmomo/osgbConvertThree.git"
+    "url": "https://github.com/fengfengmomo/osgbConvert.git"
   },
   "author": "fengfengmomo",
   "license": "MIT",
