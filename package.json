@@ -1,0 +1,55 @@
+{
+  "name": "osgbConvertThree",
+  "version": "0.0.1",
+  "description": "Module for reading  OpenSceneGraph 3D models and convert to threejs mesh, display osgb in threejs. file type supported: .osgb .osgt",
+  "main": "src/index.js",
+  "module": "build/osgbConvertThree.module.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run examples && http-server examples",
+    "examples": "rollup -c rollup.example.js",
+    "build": "rollup -c rollup.config.js",
+    "docs": "typedoc --out docs ./src/main.",
+    "pub": "npm run build && npm run docs && npm run examples && npm publish --access public .",
+    "lint": "eslint --ext .ts .",
+    "lint-fix": "eslint --ext .ts --fix ."
+  },
+  "keywords": [
+    "OpenSceneGraph",
+    "osgb",
+    "osgt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fengfengmomo/osgbConvertThree.git"
+  },
+  "author": "fengfengmomo",
+  "license": "MIT",
+  "peerDependencies": {
+    "three": ">0.160.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-strip": "3.0.2",
+    "@rollup/plugin-typescript": "10.0.1",
+    "@types/offscreencanvas": "2019.7.0",
+    "@types/three": "^0.160.0",
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "@typescript-eslint/parser": "5.47.0",
+    "eslint": "8.30.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-tsdoc": "0.2.17",
+    "eslint-plugin-typescript": "0.14.0",
+    "http-server": "14.1.1",
+    "rollup": "3.8.1",
+    "three": ">0.160.0",
+    "typedoc": "0.23.23",
+    "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-polyfill-node": "^0.13.0"
+  }
+}

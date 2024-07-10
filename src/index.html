@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Tiles Loader: RealityCapture</title>
+</head>
+<body>
+  <div id='canvas-parent'></div>
+  <div id="stats-widget"></div>
+
+  <div id="guide">
+    <span id="example-desc">
+      <b>Freeman Alley, New York.</b> Captured using iPhone 12 Pro Max and processed via RealityCapture.
+    </span>
+    <p>Use arrow/WASD keys or mouse wheel/trackpad to move around, and click and drag to turn/rotate the camera.</p>
+    <p>
+      <u>Available URL parameters:</u>
+      <ul>
+        <li><b>tilesetUrl</b>: Load another tileset json.</li>
+        <li><b>sse</b>: Change the maximum screen space error.</li>
+      </ul>
+    </p>
+  </div>
+
+  <!-- <script src="./test.js" type="module"> -->
+  
+  <!-- </script> -->
+  <script src="../build/osgbConvertThree.js"></script>
+  <script type="module">
+    var filePath = '../Samples/cessna.osgb';
+    var data;
+    await fetch(filePath).then(res => { return res.arrayBuffer() }).then(abuf => {
+        data =abuf;
+    });
+    loadModel(data);
+    function loadModel(abuf) {
+      
+      var osgObj = OsgConvert.readBuffer(abuf, filePath);
+      
+      
+      console.log(`PagedLOD`,osgObj);
+    }
+  </script>
+</body>
+</html>

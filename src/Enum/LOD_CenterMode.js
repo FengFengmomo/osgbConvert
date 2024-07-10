@@ -1,0 +1,6 @@
+let CenterMode = {
+    USE_BOUNDING_SPHERE_CENTER: 0,
+    USER_DEFINED_CENTER: 1,
+    UNION_OF_BOUNDING_SPHERE_AND_USER_DEFINED: 2
+};
+export {CenterMode};
